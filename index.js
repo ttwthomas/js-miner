@@ -13,10 +13,12 @@ const miner = new BTCMiner(block);
 let hash;
 let found = false;
 
-let nonce = 35291998 // initial nonce
+
+let nonce = 45281998 // initial nonce
 while (!found) { 
     hash = miner.getHash(nonce);
-    //console.log(hash);
+    console.log(hash.toString('hex'));
+    document.getElementById('hash').textContent = hash.toString('hex');
     found = miner.checkHash(hash);
     if (found) {
 		miner.verifyNonce(block, nonce);
