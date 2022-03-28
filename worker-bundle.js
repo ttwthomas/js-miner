@@ -1869,9 +1869,9 @@ self.addEventListener('message', function(message) {
 
     while (!found) { 
         hash = miner.getHash(nonce);
-        if (nonce%50 == 0 ){
+//         if (nonce%50 == 0 ){
             self.postMessage(hash.toString('hex'));
-        }
+//         }
         found = miner.checkHash(hash);
         if (found) {
             miner.verifyNonce(block, nonce);
