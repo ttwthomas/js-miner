@@ -9,7 +9,7 @@ myWorker.addEventListener('message', function(e) {
 }, false);
 
 var intervalId = window.setInterval(function(){
-    document.getElementById('rate').textContent = (invocations * 10 * 50) + " h/s"; //invoc * 10fps * worker evey 100 hash
+    document.getElementById('rate').textContent = (invocations * 10 * 1) + " h/s"; //invoc * 10fps * worker evey 100 hash
     invocations = 0;
   }, 100);
 
